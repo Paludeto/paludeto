@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/header.svg" alt="Gabriel Paludeto — Ad astra per aspera" width="100%" />
+<img src="assets/header.svg" alt="Gabriel Paludeto" width="100%" />
 
 <br/>
 
