@@ -29,29 +29,68 @@ Computer Engineering undergrad at **UTFPR** (Apucarana, PR — Brazil). Most of 
 
 ### 📌 Pinned Projects
 
-#### 🎮 [megaman-ppo-ga](https://github.com/Paludeto/megaman-ppo-ga)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white) ![PPO | Deep GA | OL-GA](https://img.shields.io/badge/PPO_%7C_Deep_GA_%7C_OL--GA-7C3AED?style=flat-square)  
-Controlled comparison of **PPO** (`CnnPolicy`), **Deep GA**, and **Open-Loop GA** on *Mega Man (NES)* Robot Master fights from raw `84×84×4` grayscale frames — unified step budget and reward recipe, custom `stable-retro` integration, sticky-action evaluation, and 95% Wilson confidence intervals.
-
-#### 🎯 [pico-aim](https://github.com/Paludeto/pico-aim)
-![RP2040 Dual-Core](https://img.shields.io/badge/RP2040_Dual--Core-C51A4A?style=flat-square&logo=raspberrypi&logoColor=white) ![C11 | Pico SDK](https://img.shields.io/badge/C11_%7C_Pico_SDK-00599C?style=flat-square&logo=c&logoColor=white) ![PID Q16.16 @ 1 kHz](https://img.shields.io/badge/PID_Q16.16_@_1_kHz-059669?style=flat-square)  
-Closed-loop 3D visual cursor tracker running at **1 kHz** on a Raspberry Pi Pico acting as a composite **USB CDC + HID mouse**. Core 0 runs TinyUSB while Core 1 runs a zero-float `Q16.16` PID + 128-step Smith predictor (`< 1%` CPU), hitting **0.0% overshoot**, **86 ms** settling, and **0.9 px** steady-state error — verified by **2,165** native C unit checks.
-
-#### 📡 [esp32-station](https://github.com/Paludeto/esp32-station)
-![ESP-IDF](https://img.shields.io/badge/ESP--IDF-E7352C?style=flat-square&logo=espressif&logoColor=white) ![C11](https://img.shields.io/badge/C11-555555?style=flat-square&logo=c&logoColor=white) ![nRF24L01+ 2.4 GHz](https://img.shields.io/badge/nRF24L01%2B_2.4GHz-00897B?style=flat-square)  
-Datasheet-compliant **nRF24L01+** driver component and wireless base station in C11 over hardware-managed SPI. Supports Enhanced ShockBurst (Auto-ACK, dynamic & ACK payloads), 8-byte `CRC-8/SMBUS` frames, a live **2.4 GHz RF spectrum scanner**, and a stateful virtual nRF24L01+ simulator for host-side GCC unit tests.
-
-#### 🖥️ [mips-on-c](https://github.com/Paludeto/mips-on-c)
-![C11](https://img.shields.io/badge/C11-00599C?style=flat-square&logo=c&logoColor=white) ![ISA: MIPS32](https://img.shields.io/badge/ISA-MIPS32-4E9A06?style=flat-square) ![Zero Deps](https://img.shields.io/badge/Zero_Deps-1F2937?style=flat-square)  
-Zero-dependency **MIPS32** two-pass assembler, 32-bit binary encoder/disassembler, and MARS/SPIM-compatible big-endian simulator with an interactive step debugger (`.text`, `.data`, stack, 18 pseudo-instructions, and syscalls) in portable C11 (`-Wall -Wextra -Wpedantic`).
-
-#### 💡 [arduino-optical-link](https://github.com/Paludeto/arduino-optical-link)
-![Arduino Uno](https://img.shields.io/badge/Arduino_Uno-00979D?style=flat-square&logo=arduino&logoColor=white) ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white) ![DPLL | CRC-8](https://img.shields.io/badge/DPLL_%7C_CRC--8-D97706?style=flat-square)  
-Visible-light point-to-point digital communication link (**LED → LDR**) implementing physical and data-link layers from scratch: `NRZ-L`, `NRZ-I`, and `Manchester` line coding, Schmitt-trigger auto-threshold, 8-pulse preamble sync, rising-edge **DPLL** clock recovery, and `CRC-8` (`0x07`) detection with 1-bit syndrome correction (**168** simulated optical-channel checks).
-
-#### 🫀 [ecg-wavelet-analysis](https://github.com/Paludeto/ecg-wavelet-analysis)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![MIT-BIH Database](https://img.shields.io/badge/MIT--BIH_Database-2E7D32?style=flat-square) ![Morlet CWT](https://img.shields.io/badge/Morlet_CWT-0284C7?style=flat-square)  
-Open-source time–frequency ECG characterization pipeline comparing regular sinus beats against PVCs on the **MIT-BIH Arrhythmia Database** via Morphology, FFT, STFT, and **Morlet CWT** scalograms — with XQRS alignment (96%–100% recovery), automated PhysioNet caching, CLI/Python API, and `pytest` suite.
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🎮 <a href="https://github.com/Paludeto/megaman-ppo-ga">megaman-ppo-ga</a></h3>
+      <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+        <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" />
+        <img src="https://img.shields.io/badge/PPO_%7C_Deep_GA_%7C_OL--GA-7C3AED?style=flat-square" alt="RL & GA" />
+      </p>
+      <p>Controlled comparison of <strong>PPO</strong> (<code>CnnPolicy</code>), <strong>Deep GA</strong>, and <strong>Open-Loop GA</strong> on <em>Mega Man (NES)</em> Robot Master fights from raw <code>84×84×4</code> grayscale frames, under one unified step budget, custom <code>stable-retro</code> integration, sticky-action evaluation, and 95% Wilson intervals.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🎯 <a href="https://github.com/Paludeto/pico-aim">pico-aim</a></h3>
+      <p>
+        <img src="https://img.shields.io/badge/RP2040_Dual--Core-C51A4A?style=flat-square&logo=raspberrypi&logoColor=white" alt="RP2040" />
+        <img src="https://img.shields.io/badge/C11_%7C_Pico_SDK-00599C?style=flat-square&logo=c&logoColor=white" alt="C11" />
+        <img src="https://img.shields.io/badge/PID_Q16.16_@_1_kHz-059669?style=flat-square" alt="1 kHz PID" />
+      </p>
+      <p>Closed-loop 3D visual cursor tracker running at <strong>1 kHz</strong> on a Raspberry Pi Pico acting as a composite <strong>USB CDC + HID mouse</strong> — dual-core zero-float <code>Q16.16</code> PID with a 128-step Smith predictor (<strong>0.0% overshoot</strong>, <strong>86 ms</strong> settling, <strong>2,165</strong> native C checks).</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>📡 <a href="https://github.com/Paludeto/esp32-station">esp32-station</a></h3>
+      <p>
+        <img src="https://img.shields.io/badge/ESP--IDF-E7352C?style=flat-square&logo=espressif&logoColor=white" alt="ESP-IDF" />
+        <img src="https://img.shields.io/badge/C11-555555?style=flat-square&logo=c&logoColor=white" alt="C11" />
+        <img src="https://img.shields.io/badge/nRF24L01%2B_2.4GHz-00897B?style=flat-square" alt="nRF24L01+" />
+      </p>
+      <p>Datasheet-compliant <strong>nRF24L01+</strong> driver component and wireless base station in C11 over hardware-managed SPI, with Enhanced ShockBurst, 8-byte <code>CRC-8/SMBUS</code> frames, a live <strong>2.4 GHz RF spectrum scanner</strong>, and a stateful mock-SPI host test suite.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🖥️ <a href="https://github.com/Paludeto/mips-on-c">mips-on-c</a></h3>
+      <p>
+        <img src="https://img.shields.io/badge/C11-00599C?style=flat-square&logo=c&logoColor=white" alt="C11" />
+        <img src="https://img.shields.io/badge/ISA-MIPS32-4E9A06?style=flat-square" alt="MIPS32" />
+        <img src="https://img.shields.io/badge/Zero_Deps-1F2937?style=flat-square" alt="Zero Dependencies" />
+      </p>
+      <p>Zero-dependency <strong>MIPS32</strong> two-pass assembler, 32-bit binary encoder/disassembler, and MARS/SPIM-compatible big-endian simulator with an interactive step debugger (<code>.text</code>, <code>.data</code>, stack, 18 pseudo-instructions, and syscalls) in portable C11.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>💡 <a href="https://github.com/Paludeto/arduino-optical-link">arduino-optical-link</a></h3>
+      <p>
+        <img src="https://img.shields.io/badge/Arduino_Uno-00979D?style=flat-square&logo=arduino&logoColor=white" alt="Arduino" />
+        <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++" />
+        <img src="https://img.shields.io/badge/DPLL_%7C_CRC--8-D97706?style=flat-square" alt="DPLL & CRC-8" />
+      </p>
+      <p>Visible-light digital communication link (<strong>LED → LDR</strong>) on Arduino Uno with <code>NRZ-L</code>, <code>NRZ-I</code>, and <code>Manchester</code> line coding, Schmitt-trigger auto-threshold, 8-pulse preamble sync, rising-edge <strong>DPLL</strong> clock recovery, and <code>CRC-8</code> 1-bit syndrome correction (<strong>168</strong> host checks).</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🫀 <a href="https://github.com/Paludeto/ecg-wavelet-analysis">ecg-wavelet-analysis</a></h3>
+      <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+        <img src="https://img.shields.io/badge/MIT--BIH_Database-2E7D32?style=flat-square" alt="MIT-BIH" />
+        <img src="https://img.shields.io/badge/Morlet_CWT-0284C7?style=flat-square" alt="Morlet CWT" />
+      </p>
+      <p>Open-source time–frequency ECG characterization pipeline comparing regular sinus beats against PVCs on the <strong>MIT-BIH Arrhythmia Database</strong> via Morphology, FFT, STFT, and <strong>Morlet CWT</strong> scalograms, with XQRS alignment, PhysioNet auto-download, and <code>pytest</code> suite.</p>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -114,21 +153,7 @@ Open-source time–frequency ECG characterization pipeline comparing regular sin
 
 ---
 
-### 📊 GitHub Telemetry
-
 <div align="center">
-
-<a href="https://github.com/Paludeto">
-  <img src="https://streak-stats.demolab.com?user=Paludeto&theme=tokyonight&hide_border=true&background=0D1528&ring=38BDF8&fire=818CF8&currStreakLabel=7DD3FC&sideLabels=CBD5E1&dates=94A3B8&stroke=1E293B" alt="GitHub Streak" height="165" />
-</a>
-
-<br/>
-
-<a href="https://github.com/Paludeto">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Paludeto&bg_color=0D1528&color=CBD5E1&line=38BDF8&point=34D399&area=true&area_color=818CF8&hide_border=true&custom_title=Contribution%20Signal" alt="Contribution Activity Graph" width="96%" />
-</a>
-
-<br/><br/>
 
 <img src="assets/footer.svg" alt="Ad astra per aspera" width="100%" />
 
