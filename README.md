@@ -1,16 +1,214 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**Paludeto/paludeto** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<img src="assets/header.svg" alt="Gabriel Paludeto — Ad astra per aspera" width="100%" />
 
-Here are some ideas to get you started:
+<br/>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+[![Email](https://img.shields.io/badge/Email-paludeto%40alunos.utfpr.edu.br-0F172A?style=for-the-badge&logo=gmail&logoColor=38BDF8)](mailto:paludeto@alunos.utfpr.edu.br)
+[![GitHub](https://img.shields.io/badge/GitHub-%40Paludeto-0F172A?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Paludeto)
+[![Papers](https://img.shields.io/badge/Publications-2_Papers-0F172A?style=for-the-badge&logo=googlescholar&logoColor=34D399)](#-publications)
+<!-- Uncomment whenever you want to add social / academic links:
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Gabriel_Paludeto-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_HANDLE)
+[![Lattes](https://img.shields.io/badge/Lattes-CNPq-1B4F72?style=for-the-badge)](http://lattes.cnpq.br/YOUR_ID)
 -->
+
+</div>
+
+---
+
+### 👋 About
+
+Computer Engineering undergrad at **UTFPR** (Apucarana, PR — Brazil). Most of my projects revolve around **reinforcement learning**, **embedded systems**, **signal processing**, and **numerical methods** — usually exploring topics by implementing drivers, simulators, and experiments on my own.
+
+- 🎓 B.S. in Computer Engineering @ **UTFPR** *(2023–2028)*
+- 🔬 Undergraduate researcher
+- 🤖 Founder & mentor at **RoboAP**, a competitive robotics and STEM outreach initiative
+- 🌍 Portuguese *(native)* · English *(C1)*
+
+---
+
+### 📌 Pinned Projects
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🎮 <a href="https://github.com/Paludeto/megaman-ppo-ga">megaman-ppo-ga</a></h3>
+      <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+        <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" />
+        <img src="https://img.shields.io/badge/PPO_%7C_Deep_GA_%7C_OL--GA-7C3AED?style=flat-square" alt="RL & GA" />
+      </p>
+      <p>Controlled comparison of <strong>PPO</strong> (<code>CnnPolicy</code>), <strong>Deep GA</strong>, and <strong>Open-Loop GA</strong> on <em>Mega Man (NES)</em> Robot Master fights from raw <code>84×84×4</code> grayscale frames.</p>
+      <ul>
+        <li>Single unified step budget, reward recipe, and evaluator across all methods.</li>
+        <li>Custom <code>stable-retro</code> integration, sticky-action robustness, and 95% Wilson confidence intervals.</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🎯 <a href="https://github.com/Paludeto/pico-aim">pico-aim</a></h3>
+      <p>
+        <img src="https://img.shields.io/badge/RP2040_Dual--Core-C51A4A?style=flat-square&logo=raspberrypi&logoColor=white" alt="RP2040" />
+        <img src="https://img.shields.io/badge/C11_%7C_Pico_SDK-00599C?style=flat-square&logo=c&logoColor=white" alt="C11" />
+        <img src="https://img.shields.io/badge/PID_Q16.16_@_1_kHz-059669?style=flat-square" alt="1 kHz PID" />
+      </p>
+      <p>Closed-loop 3D visual cursor tracker running at <strong>1 kHz</strong> on a bare Raspberry Pi Pico acting as a composite <strong>USB CDC + HID mouse</strong>.</p>
+      <ul>
+        <li>Core 0 handles TinyUSB; Core 1 runs a zero-float <code>Q16.16</code> PID + 128-step Smith predictor (<code>&lt; 1%</code> CPU).</li>
+        <li><strong>0.0% overshoot</strong>, <strong>86 ms</strong> settling, <strong>0.9 px</strong> steady-state error, and <strong>2,165</strong> native C unit checks.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>📡 <a href="https://github.com/Paludeto/esp32-station">esp32-station</a></h3>
+      <p>
+        <img src="https://img.shields.io/badge/ESP--IDF-E7352C?style=flat-square&logo=espressif&logoColor=white" alt="ESP-IDF" />
+        <img src="https://img.shields.io/badge/C11-555555?style=flat-square&logo=c&logoColor=white" alt="C11" />
+        <img src="https://img.shields.io/badge/nRF24L01%2B_2.4GHz-00897B?style=flat-square" alt="nRF24L01+" />
+      </p>
+      <p>Datasheet-compliant <strong>nRF24L01+</strong> driver component &amp; wireless base station written from scratch in C11 over hardware-managed SPI.</p>
+      <ul>
+        <li>Enhanced ShockBurst (Auto-ACK, dynamic &amp; ACK payloads), 8-byte <code>CRC-8/SMBUS</code> frames, and a live <strong>2.4 GHz RF spectrum scanner</strong>.</li>
+        <li>Ships with a stateful virtual nRF24L01+ hardware simulator for host-side GCC unit testing.</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🖥️ <a href="https://github.com/Paludeto/mips-on-c">mips-on-c</a></h3>
+      <p>
+        <img src="https://img.shields.io/badge/C11-00599C?style=flat-square&logo=c&logoColor=white" alt="C11" />
+        <img src="https://img.shields.io/badge/ISA-MIPS32-4E9A06?style=flat-square" alt="MIPS32" />
+        <img src="https://img.shields.io/badge/Zero_Deps-1F2937?style=flat-square" alt="Zero Dependencies" />
+      </p>
+      <p>Zero-dependency <strong>MIPS32</strong> two-pass assembler, 32-bit binary encoder/disassembler, and big-endian simulator with an interactive step debugger.</p>
+      <ul>
+        <li>MARS/SPIM-compatible memory model (<code>.text</code>, <code>.data</code>, stack), 18 pseudo-instructions, and syscalls.</li>
+        <li>Clean portable C11 compiled with <code>-Wall -Wextra -Wpedantic</code>, CMake/CTest, and bilingual CLI.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>💡 <a href="https://github.com/Paludeto/arduino-optical-link">arduino-optical-link</a></h3>
+      <p>
+        <img src="https://img.shields.io/badge/Arduino_Uno-00979D?style=flat-square&logo=arduino&logoColor=white" alt="Arduino" />
+        <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++" />
+        <img src="https://img.shields.io/badge/DPLL_%7C_CRC--8-D97706?style=flat-square" alt="DPLL & CRC-8" />
+      </p>
+      <p>Visible-light point-to-point digital communication link (<strong>LED → LDR</strong>) implementing physical and data-link layers from scratch.</p>
+      <ul>
+        <li><code>NRZ-L</code>, <code>NRZ-I</code>, and <code>Manchester</code> line coding, Schmitt-trigger auto-threshold, 8-pulse preamble sync, and rising-edge <strong>DPLL</strong> clock recovery.</li>
+        <li><code>CRC-8</code> (<code>0x07</code>) detection + <strong>1-bit syndrome correction</strong>, validated by <strong>168</strong> RC-channel host assertions.</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🫀 <a href="https://github.com/Paludeto/ecg-wavelet-analysis">ecg-wavelet-analysis</a></h3>
+      <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+        <img src="https://img.shields.io/badge/MIT--BIH_Database-2E7D32?style=flat-square" alt="MIT-BIH" />
+        <img src="https://img.shields.io/badge/Morlet_CWT-0284C7?style=flat-square" alt="Morlet CWT" />
+      </p>
+      <p>Open-source time–frequency ECG characterization pipeline comparing regular sinus beats against PVCs on the <strong>MIT-BIH Arrhythmia Database</strong>.</p>
+      <ul>
+        <li>Unifies Morphology, FFT, STFT, and <strong>Morlet CWT</strong> scalograms with XQRS alignment (96%–100% recovery) and automated PhysioNet caching.</li>
+        <li>Companion repository to my first-author 2026 journal paper, complete with CLI, Python API, and <code>pytest</code> suite.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<details>
+<summary><strong>🧪 More from the Lab — Robotics, Numerical Solvers &amp; Compilers</strong></summary>
+
+<br/>
+
+| Repository | Stack | What it does |
+| :--- | :--- | :--- |
+| [**bonobo-client**](https://github.com/Paludeto/bonobo-client) | `C++` `Qt` `Protobuf` `UDP` | Multi-agent strategy engine and low-latency simulator client for Very Small Size Soccer (VSSS). |
+| [**mini-soccer-controller**](https://github.com/Paludeto/mini-soccer-controller) | `C++` | Joystick teleoperation client for robots in TraveSim. |
+| [**vss-hardware**](https://github.com/Paludeto/vss-hardware) | `PCB` `Hardware` | Custom schematics and PCB layout for VSSS robots *(first iteration, no fuse — RIP)*. |
+| [**gauss-seidel-fortran**](https://github.com/Paludeto/gauss-seidel-fortran) | `Fortran` | Minimal iterative Gauss-Seidel linear solver written in modern Fortran. |
+| [**line_follower**](https://github.com/Paludeto/line_follower) | `C++` `Arduino` | Autonomous line-follower firmware for competition microcontrollers. |
+| [**compiladores-gyh**](https://github.com/Paludeto/compiladores-gyh) | `Java` | Compiler implementation for the GYH language. |
+
+</details>
+
+---
+
+### 🔬 Research & STEM Outreach
+
+- **📈 Macroeconomic Forecasting with ML** — *PIBIC/CNPq Research Fellow, UTFPR*  
+  End-to-end modeling pipeline (acquisition, preprocessing, feature selection, training, and out-of-sample validation) forecasting Brazil's monthly GDP from regional industrial production time series, benchmarking linear baselines against neural networks under uncertainty.
+
+- **🔥 3D Transient Simulation of Ohmic Heating** — *Undergraduate Researcher, UTFPR*  
+  High-performance finite-difference solvers implemented from scratch in **Fortran** for Laplace, Poisson, and heat equations, solving 3D coupled nonlinear thermo-electrical PDEs over uniform meshes.
+
+- **🤖 RoboAP — Competitive Robotics & STEM Outreach** — *Founder, Mentor & Developer*  
+  Built a competitive robotics team and local STEM outreach initiative from zero — securing sponsorships with local companies, teaching robotics fundamentals to high school students, and co-supervising a regional **OBR** (Brazilian Robotics Olympiad) winner.
+
+---
+
+### 📄 Publications
+
+> **Analysis of Premature Ventricular Contractions and Regular Heartbeats via the Wavelet Transform** *(First Author)*  
+> *Revista Mundi Engenharia, Tecnologia e Gestão*, v. 11, n. 2 (2026) · Presented at VI SIMECA (IFPR, 2025)  
+> [![DOI](https://img.shields.io/badge/DOI-10.21575%2F25254782rmetg2026vol11n22551-2563EB?style=flat-square)](https://doi.org/10.21575/25254782rmetg2026vol11n22551) [![Code](https://img.shields.io/badge/Code-ecg--wavelet--analysis-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Paludeto/ecg-wavelet-analysis)
+
+> **Three-Dimensional Numerical Simulation of Ohmic Heating in Food** *(Co-author)*  
+> *REMUNOM — Revista Multidisciplinar do Nordeste Mineiro*, v. 2, n. 2 (2026) · Presented at SICITE (UTFPR)  
+> [![DOI](https://img.shields.io/badge/DOI-10.66104%2F6965rv11-2563EB?style=flat-square)](https://doi.org/10.66104/6965rv11)
+
+---
+
+### 🧰 Toolbox & Domains
+
+<div align="center">
+
+**Languages**  
+![C](https://img.shields.io/badge/C11-00599C?style=for-the-badge&logo=c&logoColor=white)
+![C++](https://img.shields.io/badge/C%2B%2B-004482?style=for-the-badge&logo=cplusplus&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Fortran](https://img.shields.io/badge/Fortran-734F96?style=for-the-badge&logo=fortran&logoColor=white)
+![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge)
+![MIPS32](https://img.shields.io/badge/MIPS32_Assembly-4E9A06?style=for-the-badge)
+
+**AI, Vision & Scientific Computing**  
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![Stable-Baselines3](https://img.shields.io/badge/Stable--Baselines3-1F2937?style=for-the-badge)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+
+**Embedded, Robotics & Systems**  
+![ESP-IDF](https://img.shields.io/badge/ESP32_%7C_ESP--IDF-E7352C?style=for-the-badge&logo=espressif&logoColor=white)
+![RP2040](https://img.shields.io/badge/RP2040_%7C_Pico_SDK-C51A4A?style=for-the-badge&logo=raspberrypi&logoColor=white)
+![FreeRTOS](https://img.shields.io/badge/FreeRTOS-2E7D32?style=for-the-badge)
+![Arduino](https://img.shields.io/badge/Arduino-00878F?style=for-the-badge&logo=arduino&logoColor=white)
+![Qt](https://img.shields.io/badge/Qt-41CD52?style=for-the-badge&logo=qt&logoColor=white)
+![Protocol Buffers](https://img.shields.io/badge/Protocol_Buffers-4285F4?style=for-the-badge)
+![CMake](https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
+</div>
+
+---
+
+### 📊 GitHub Telemetry
+
+<div align="center">
+
+<a href="https://github.com/Paludeto">
+  <img src="https://streak-stats.demolab.com?user=Paludeto&theme=tokyonight&hide_border=true&background=0D1528&ring=38BDF8&fire=818CF8&currStreakLabel=7DD3FC&sideLabels=CBD5E1&dates=94A3B8&stroke=1E293B" alt="GitHub Streak" height="165" />
+</a>
+
+<br/>
+
+<a href="https://github.com/Paludeto">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Paludeto&bg_color=0D1528&color=CBD5E1&line=38BDF8&point=34D399&area=true&area_color=818CF8&hide_border=true&custom_title=Contribution%20Signal" alt="Contribution Activity Graph" width="96%" />
+</a>
+
+<br/><br/>
+
+<img src="assets/footer.svg" alt="Ad astra per aspera" width="100%" />
+
+</div>
